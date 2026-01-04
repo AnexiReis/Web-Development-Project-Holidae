@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holidae | Affordable Holiday Packages</title>
+  <meta name="description" content="Holidae offers affordable holiday packages. Browse destinations, compare deals, and book with confidence." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Holidae home">
+        <span class="brand-mark" aria-hidden="true">☀️</span>
+        <span class="brand-name">Holidae</span>
+      </a>
+
+      <!-- Mobile nav toggle button (JS toggles aria-expanded + menu visibility) -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="package.html">Featured Package</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Holidae hero section">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Affordable getaways, made simple.</h1>
+          <p>
+            Browse packages on mobile, then book with confidence on desktop. Holidae is built for both.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="package.html">View featured deal</a>
+            <a class="btn btn-ghost" href="#packages">Browse packages</a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Key benefits">
+            <li>Flexible dates</li>
+            <li>ATOL-style protection messaging (prototype)</li>
+            <li>Secure checkout UI (prototype)</li>
+          </ul>
+        </div>
+
+        <!-- Rich media: responsive image -->
+        <figure class="hero-media">
+          <img
+            src="media/beach-hero.jpg"
+            alt="A sunny beach with waves rolling onto shore"
+            loading="eager"
+          />
+          <figcaption>Dream destinations without premium prices.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="packages" aria-label="Holiday packages">
+      <div class="container">
+        <header class="section-head">
+          <h2>Popular packages</h2>
+          <p>Compare quick options. Tap a card to learn more.</p>
+        </header>
+
+        <!-- Filter interaction (JS filters package cards) -->
+        <div class="controls" role="region" aria-label="Package filters">
+          <label for="packageFilter">Filter by:</label>
+          <select id="packageFilter" name="packageFilter">
+            <option value="all">All</option>
+            <option value="beach">Beach</option>
+            <option value="city">City</option>
+            <option value="adventure">Adventure</option>
+          </select>
+
+          <label class="search-label" for="packageSearch">Search:</label>
+          <input id="packageSearch" type="search" placeholder="e.g. Spain, Rome, hiking" />
+        </div>
+
+        <div class="grid cards" data-cards>
+          <article class="card" data-category="beach" data-keywords="spain costa beach sun">
+            <img
+              src="media/costa-escape.jpg"
+              alt="Coastal town with sea view"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Costa Escape (Spain)</h3>
+              <p>5 nights • Flights + hotel • From <strong>£349</strong></p>
+              <a class="card-link" href="package.html">See details</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="city" data-keywords="italy rome city culture food">
+            <img
+              src="media/rome-city.jpg"
+              alt="A historic city street at golden hour"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Rome Weekend</h3>
+              <p>3 nights • Central stay • From <strong>£289</strong></p>
+              <a class="card-link" href="package.html#alternatives">Compare</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="adventure" data-keywords="iceland adventure hiking nature">
+            <img
+              src="media/nordic-adventure.jpg"
+              alt="Mountain landscape with a hiker"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Nordic Adventure</h3>
+              <p>4 nights • Guided tour • From <strong>£499</strong></p>
+              <a class="card-link" href="package.html#itinerary">See itinerary</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-label="Video preview">
+      <div class="container">
+        <header class="section-head">
+          <h2>Preview the vibe</h2>
+          <p>A quick video to help people browsing on mobile make a faster decision.</p>
+        </header>
+
+        <!-- Rich media: embedded video -->
+        <div class="video-wrap" role="group" aria-label="Destination preview video">
+          <iframe
+            src="https://www.youtube.com/embed/exI_hD_4jAM"
+            title="Travel inspiration video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Frequently asked questions">
+      <div class="container">
+        <header class="section-head">
+          <h2>FAQs</h2>
+          <p>Tap a question to expand (accordion interaction).</p>
+        </header>
+
+        <div class="faq" data-accordion>
+          <button class="faq-q" type="button" aria-expanded="false">Can I reserve on mobile and pay later on desktop?</button>
+          <div class="faq-a" hidden>
+            <p>Yes. This prototype simulates saving your package selection so you can continue later.</p>
+          </div>
+
+          <button class="faq-q" type="button" aria-expanded="false">What’s included in the package price?</button>
+          <div class="faq-a" hidden>
+            <p>Each package shows inclusions like flights, hotel, breakfast, and transfers where applicable.</p>
+          </div>
+
+          <button class="faq-q" type="button" aria-expanded="false">Is this a real booking?</button>
+          <div class="faq-a" hidden>
+            <p>No—this is a prototype site for assessment. The checkout is UI-only.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Holidae</strong> — prototype holiday booking experience.</p>
+      <p class="small">
+        <a href="contact.html">Contact</a> • <a href="package.html">Featured package</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

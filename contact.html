@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holidae | Contact</title>
+  <meta name="description" content="Contact Holidae. Prototype enquiry form and company details." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Holidae home">
+        <span class="brand-mark" aria-hidden="true">☀️</span>
+        <span class="brand-name">Holidae</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="package.html">Featured Package</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <header class="section-head">
+          <h1>Contact Holidae</h1>
+          <p>Ask a question, request a callback, or check your saved selection (prototype).</p>
+        </header>
+
+        <div class="grid-2">
+          <article class="panel">
+            <h2>Enquiry form</h2>
+
+            <form class="form" data-contact-form novalidate>
+              <div class="grid-form">
+                <div class="field">
+                  <label for="cName">Name</label>
+                  <input id="cName" name="cName" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="cEmail">Email</label>
+                  <input id="cEmail" name="cEmail" type="email" autocomplete="email" required />
+                </div>
+
+                <div class="field">
+                  <label for="cTopic">Topic</label>
+                  <select id="cTopic" name="cTopic">
+                    <option>General question</option>
+                    <option>Changing dates</option>
+                    <option>Payment / booking</option>
+                    <option>Accessibility support</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="cMsg">Message</label>
+                  <textarea id="cMsg" name="cMsg" rows="5" required placeholder="How can we help?"></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn" type="submit">Send (prototype)</button>
+              </div>
+
+              <p class="form-message" data-form-message role="status"></p>
+            </form>
+          </article>
+
+          <aside class="panel">
+            <h2>Details</h2>
+            <ul class="details">
+              <li><strong>Email:</strong> hello@holidae.example</li>
+              <li><strong>Phone:</strong> 01234 567 890</li>
+              <li><strong>Hours:</strong> Mon–Fri, 9am–5pm</li>
+            </ul>
+
+            <hr class="divider" />
+
+            <h3>Saved selection</h3>
+            <p class="muted small">
+              If you used “Save for later” on the package page, it appears here.
+            </p>
+
+            <div class="saved" data-saved>
+              <p class="small muted">Nothing saved yet.</p>
+            </div>
+
+            <button class="btn btn-ghost" type="button" data-clear-saved>Clear saved selection</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Holidae</strong> — prototype holiday booking experience.</p>
+      <p class="small"><a href="index.html">Home</a> • <a href="package.html">Featured package</a><

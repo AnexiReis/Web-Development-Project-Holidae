@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holidae | Costa Escape (Spain)</title>
+  <meta name="description" content="Costa Escape (Spain) package details, itinerary, gallery, and prototype booking form." />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Holidae home">
+        <span class="brand-mark" aria-hidden="true">☀️</span>
+        <span class="brand-name">Holidae</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="package.html">Featured Package</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <header class="package-head">
+          <div>
+            <h1>Costa Escape (Spain)</h1>
+            <p class="muted">
+              5 nights • Flights + hotel • Great for couples & friends
+            </p>
+
+            <ul class="chips" aria-label="Package highlights">
+              <li class="chip">Beachfront area</li>
+              <li class="chip">Free cancellation (prototype)</li>
+              <li class="chip">Breakfast option</li>
+            </ul>
+          </div>
+
+          <aside class="price-box" aria-label="Price summary">
+            <p class="price-from">From</p>
+            <p class="price"><span aria-hidden="true">£</span><span data-base-price>349</span></p>
+            <p class="small muted">Per person (prototype estimate)</p>
+            <a class="btn btn-wide" href="#booking">Start booking</a>
+          </aside>
+        </header>
+
+        <div class="grid-2">
+          <article class="panel">
+            <h2>What’s included</h2>
+            <ul class="checklist">
+              <li>Return flights</li>
+              <li>4★ hotel stay</li>
+              <li>Optional breakfast add-on</li>
+              <li>Local tips in the app (prototype)</li>
+            </ul>
+
+            <h3 id="itinerary">Sample itinerary</h3>
+            <ol class="itinerary">
+              <li><strong>Day 1:</strong> Arrival + sunset walk</li>
+              <li><strong>Day 2:</strong> Beach day + local market</li>
+              <li><strong>Day 3:</strong> Optional boat tour</li>
+              <li><strong>Day 4:</strong> Old town + tapas evening</li>
+              <li><strong>Day 5:</strong> Free day + return</li>
+            </ol>
+          </article>
+
+          <article class="panel">
+            <h2>Gallery</h2>
+            <p class="muted">Tap an image to view it larger (modal interaction).</p>
+
+            <!-- Gallery images: JS attaches click handlers and opens modal -->
+            <div class="gallery" data-gallery>
+              <button class="gallery-item" type="button">
+                <img src="media/package-beach-1.jpg" alt="Wide sandy beach with clear blue water" loading="lazy" />
+              </button>
+
+              <button class="gallery-item" type="button">
+                <img src="media/package-beach-2.jpg" alt="Palm trees along a sunny beach" loading="lazy" />
+              </button>
+
+              <button class="gallery-item" type="button">
+                <img src="media/package-hotel.jpg" alt="Modern hotel room with a double bed" loading="lazy" />
+              </button>
+
+              <!-- Optional fourth image if you download it -->
+              <!--
+              <button class="gallery-item" type="button">
+                <img src="media/package-nature.jpg" alt="Green mountain landscape under cloudy sky" loading="lazy" />
+              </button>
+              -->
+            </div>
+
+            <div class="note">
+              <p class="small">
+                Tip: keep images inside <code>media/</code> and use short filenames.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="booking" aria-label="Prototype booking form">
+      <div class="container">
+        <header class="section-head">
+          <h2>Prototype booking</h2>
+          <p>Designed for desktop checkout and mobile browsing. This form validates with JavaScript.</p>
+        </header>
+
+        <form class="form" data-booking-form novalidate>
+          <!-- Note: novalidate lets our JS handle the messages consistently -->
+          <div class="grid-form">
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+              <p class="field-hint">As shown on passport (prototype).</p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <p class="field-hint">We’ll send confirmation to this address.</p>
+            </div>
+
+            <div class="field">
+              <label for="travellers">Travellers</label>
+              <select id="travellers" name="travellers">
+                <option value="1">1 traveller</option>
+                <option value="2" selected>2 travellers</option>
+                <option value="3">3 travellers</option>
+                <option value="4">4 travellers</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="month">Departure month</label>
+              <select id="month" name="month">
+                <option value="low" selected>November–March (lower price)</option>
+                <option value="mid">April–June (mid price)</option>
+                <option value="high">July–August (peak price)</option>
+              </select>
+            </div>
+
+            <fieldset class="field fieldset">
+              <legend>Add-ons</legend>
+              <label class="check">
+                <input type="checkbox" name="breakfast" value="breakfast" />
+                Breakfast (+£35 pp)
+              </label>
+              <label class="check">
+                <input type="checkbox" name="transfers" value="transfers" />
+                Airport transfers (+£20 pp)
+              </label>
+            </fieldset>
+
+            <div class="field">
+              <label for="notes">Requests (optional)</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="e.g. late check-in, twin beds"></textarea>
+            </div>
+          </div>
+
+          <div class="form-summary" aria-live="polite">
+            <p><strong>Estimated total:</strong> <span data-total>£0</span></p>
+            <p class="small muted">Prototype estimate only — no payment is processed.</p>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Reserve (prototype)</button>
+            <button class="btn btn-ghost" type="button" data-save-selection>Save for later</button>
+          </div>
+
+          <p class="form-message" data-form-message role="status"></p>
+        </form>
+
+        <section class="section-mini" id="alternatives" aria-label="Alternative packages">
+          <h3>Compare alternatives</h3>
+          <div class="grid cards">
+            <article class="card" data-category="city" data-keywords="rome city break">
+              <img src="media/rome-city.jpg" alt="Historic city street in Rome at sunset" loading="lazy" />
+              <div class="card-body">
+                <h4>Rome Weekend</h4>
+                <p>3 nights • From <strong>£289</strong></p>
+                <a class="card-link" href="index.html#packages">Back to packages</a>
+              </div>
+            </article>
+
+            <article class="card" data-category="adventure" data-keywords="nordic adventure">
+              <img src="media/nordic-adventure.jpg" alt="Hiker standing on a mountain landscape" loading="lazy" />
+              <div class="card-body">
+                <h4>Nordic Adventure</h4>
+                <p>4 nights • From <strong>£499</strong></p>
+                <a class="card-link" href="index.html#packages">Back to packages</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for gallery (hidden until opened by JS) -->
+  <dialog class="modal" data-modal>
+    <button class="modal-close" type="button" data-modal-close aria-label="Close">✕</button>
+    <img class="modal-img" data-modal-img alt="" />
+    <p class="small muted" data-modal-caption></p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Holidae</strong> — prototype holiday booking experience.</p>
+      <p class="small">
+        <a href="index.html">Home</a> • <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
